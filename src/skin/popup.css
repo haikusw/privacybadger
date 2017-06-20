@@ -29,6 +29,10 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
   width: 400px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
 }
 
 a { text-decoration: none }
@@ -160,8 +164,9 @@ left: 0;
   display: none;
 }
 #privacyBadgerHeader{
-color: #505050;
-font-size: 16px;
+  color: #505050;
+  font-size: 16px;
+  flex: none;
 }
 #privacyBadgerHeader h2{
   margin: 5px;
@@ -190,8 +195,38 @@ font-size: 16px;
 .ui-slider .ui-slider-handle {
   cursor: move;
 }
+
 #siteControls {
   margin-bottom: 5px;
+  flex: none;
+}
+
+#blockedResourcesContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+#blockedResourcesHeader {
+  flex: none;
+}
+
+#blockedResources {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+#blockedResourcesInner {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+#noThirdPartyResources {
+  flex: none;
 }
 
 #firstRun {
@@ -215,8 +250,7 @@ font-size: 16px;
   color: #333;
 }
 .clickerContainer {
-  max-height: 290px;
-  overflow-y: auto;
+  height: 100%;
   background-color: #E8E9EA;
 }
 .key {
